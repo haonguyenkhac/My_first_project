@@ -168,10 +168,10 @@ ul li label:last-child {
       var x =document.getElementById("myP");
       if (x.contentEditable == "true") {
         x.contentEditable = "false";
-        button.innerHTML = "Enable";
+        button.innerHTML = "OK";
       } else {
         x.contentEditable = "true";
-        button.innerHTML = "Disable";
+        button.innerHTML = "Edit";
   }
 }
     
