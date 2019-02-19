@@ -4,7 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title></title>
 <script src="jquery-3.3.1.min.js"></script>
-  <script src="jquery-ui/jquery-ui.js"></script>
+  <script src="jquery-ui.js"></script>
   <script type="text/javascript">
     $( function() {
     $(".table").sortable();
