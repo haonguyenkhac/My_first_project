@@ -19,7 +19,7 @@ $(document).ready(function(){
 
       $('.edit').click(function(){editable(this);store();});
 
-      $(".delete").click(function(){ 
+      $(".delete").click(function(){
         var t=this.parentElement;
         var h=t.parentNode;
         h.removeChild(t); store();});
@@ -32,12 +32,12 @@ $(document).ready(function(){
       $(".remove").click(function(){
       $("ul").empty(); remove();});
 
-      $(".delete").click(function(){ 
-       var t=this.parentElement;
-       var h=t.parentNode;
-       h.removeChild(t); store();
-       }); 
-     });
+      $(".delete").click(function(){
+        var t=this.parentElement;
+        var h=t.parentNode;
+        h.removeChild(t); store();
+      });
+});
 
 function editable(button) {
   $(button).prev('label').attr('contenteditable','true');}
