@@ -1,5 +1,6 @@
 $( function() {
-  $(".table").sortable({handle: '.move'});});
+  $(".table").sortable({handle: '.move'});
+});
 
 
 $(document).ready(function(){
@@ -17,7 +18,9 @@ $(document).ready(function(){
             +'<button class="delete">Delete</button>'
             +'</li>'));
 
-      $('.edit').click(function(){editable(this);store();});
+      $('.edit').click(function(){
+        editable(this);store();
+      });
 
       $(".delete").click(function(){
         var t=this.parentElement;
@@ -26,11 +29,16 @@ $(document).ready(function(){
 
       store();
       item.value=""; 
-      }});
+      }
+});
 
-      $('.edit').click(function(){editable(this);});
+      $('.edit').click(function(){
+        editable(this);
+      });
+  
       $(".remove").click(function(){
-      $("ul").empty(); remove();});
+      $("ul").empty(); remove();
+      });
 
       $(".delete").click(function(){
         var t=this.parentElement;
@@ -40,7 +48,8 @@ $(document).ready(function(){
 });
 
 function editable(button) {
-  $(button).prev('label').attr('contenteditable','true');}
+  $(button).prev('label').attr('contenteditable','true');
+}
     
 function store() {
   var table=document.querySelector(".table");
@@ -49,13 +58,16 @@ function store() {
 function remove(){
   if (confirm("Are you sure to remove all task of List???" )){
     table=document.querySelector(".table");
-    localStorage.removeItem("myitems");}}
+    localStorage.removeItem("myitems");
+  }
+}
 
 function getValues() {
   var table=document.querySelector(".table");
   var storedValues = localStorage.myitems;
   if (!storedValues) {
-    "<li>Make a to do list</li>";} 
+    "<li>Make a to do list</li>";
+  } 
   else {
     table.innerHTML = storedValues;
   }
