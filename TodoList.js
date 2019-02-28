@@ -48,7 +48,8 @@ $(document).ready(function(){
       item.value=""; 
       }});
       $(".remove").click(function(){
-      $("ul").empty(); remove();});
+        if (confirm("Are you sure to remove all task of List???" )){
+          $("ul").empty(); remove();}});
       $(".delete").click(function(){ 
        var t=this.parentElement;
        var h=t.parentNode;
@@ -71,9 +72,8 @@ function store() {
   localStorage.myitems = table.innerHTML;}
 
 function remove(){
-  if (confirm("Are you sure to remove all task of List???" )){
     table=document.querySelector(".table");
-    localStorage.removeItem("myitems");}}
+    localStorage.removeItem("myitems");}
 
 function getValues() {
   var table=document.querySelector(".table");
